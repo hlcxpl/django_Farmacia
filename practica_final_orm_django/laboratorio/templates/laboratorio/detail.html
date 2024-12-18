@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle del Laboratorio{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Detalle del Laboratorio</h1>
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">{{ laboratorio.nombre }}</h2>
+        <p><strong>Ciudad:</strong> {{ laboratorio.ciudad }}</p>
+        <p><strong>País:</strong> {{ laboratorio.pais }}</p>
+    </div>
+</div>
+<a href="{% url 'laboratorio_list' %}" class="btn btn-secondary mt-3">Volver a la lista</a>
+{% endblock %}
